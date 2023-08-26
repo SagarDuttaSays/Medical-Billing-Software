@@ -9,13 +9,15 @@ function authJwt() {
         isRevoked: isRevoked
     }).unless({
         path: [
-            {url: /\/api\/v1\/products\/(.*)/ , methods: ['GET'] },
-            {url: /\/api\/v1\/services\/(.*)/ , methods: ['GET'] },
-            {url: /\/api\/v1\/user\/cart\/(.*)/, methods: ['GET', 'DELETE', 'PUT', 'POST']},
+            { url: '/', methods: ['GET'] }, // Allow GET request to '/'
+            { url: '/api/v1/', methods: ['GET'] }, // Allow GET request to '/api/v1/'
+            { url: /\/api\/v1\/products\/(.*)/, methods: ['GET'] },
+            { url: /\/api\/v1\/services\/(.*)/, methods: ['GET'] },
+            { url: /\/api\/v1\/user\/cart\/(.*)/, methods: ['GET', 'DELETE', 'PUT', 'POST'] },
             `${api}/users/login`,
             `${api}/users/register`
         ]
-    })
+    });
 }
 
 async function isRevoked(req, payload, done) {

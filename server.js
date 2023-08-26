@@ -40,7 +40,10 @@ mongoose.connect(process.env.MONGO_URL)
 })
 
 app.get(`/`, (_,res)=>{
-    res.status(200).json({message:"Welcome to Online Billing System"})
+    res.status(200).json({message:"Welcome to Plotline e-commerce. Please follow the path instructions mentioned in the report or README file to further proceed."})
+})
+app.get(`/api/v1`, (_,res)=>{
+    res.status(200).json({message:"Offo! Again here? Please read the document na..."})
 })
 //Server
 app.listen(3000, ()=>{
