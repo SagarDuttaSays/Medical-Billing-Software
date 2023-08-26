@@ -6,6 +6,7 @@ const cors = require('cors');
 require('dotenv/config');
 const authJwt = require('./helpers/jwt');
 const errorHandler = require('./helpers/error-handler');
+const connectDB = require('./database/db')
 
 //can be used for connecting with front end -- SCALABILITY
 app.use(cors());
@@ -30,10 +31,8 @@ app.use(`${api}/services`, servicesRoutes);
 app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/user/cart`, userCartRoutes);
 
-//Database
-mongoose.connect(process.env.MONGO_URL, () => {
-    console.log("Mongo connected");
-});
+// Connect to database
+connectDB()
 
 app.get(`/`, (_,res)=>{
     res.status(200).json({message:"Welcome to Online Billing System"})
