@@ -25,6 +25,20 @@ value of selected items) ✅
 
 ● Confirm the order ✅
 
+# Good to have
+● Additional API for admin to see all the orders. ✅
+
+● Appropriate test cases to simulate practical scenarios that you would want to test
+the system for. ✅ (NOTE: I have populated the database with sample admin, users, products and services. Feel free to add/remove.)
+
+Sample Admin:
+email: admin@plotline.so
+password: 123
+
+Sample User 01:
+email: user01@plotline.so
+password: 123
+
 # Run
 
 ### Install
