@@ -27,51 +27,51 @@ npm start
 ### Products
 
 ```
-GET      /api/v1/products
-GET      /api/v1/products/:id
-POST     /api/v1/products/addOne
-POST     /api/v1/products/addMany
-PUT      /api/v1/products/:id
-DELETE   /api/v1/products/:id
-DELETE   /api/v1/products/
+GET      /api/v1/products       (PUBLIC PATH)
+GET      /api/v1/products/:id       (PUBLIC PATH)
+POST     /api/v1/products/addOne        (ADMIN PATH)
+POST     /api/v1/products/addMany       (ADMIN PATH)
+PUT      /api/v1/products/:id       (ADMIN PATH)
+DELETE   /api/v1/products/:id       (ADMIN PATH)
+DELETE   /api/v1/products/      (ADMIN PATH)
 ```
 
 ### Services
 
 ```
-GET      /api/v1/services
-GET      /api/v1/services/:id
-POST     /api/v1/services/addOne
-POST     /api/v1/services/addMany
-PUT      /api/v1/services/:id
-DELETE   /api/v1/services/:id
-DELETE   /api/v1/services/
+GET      /api/v1/services       (PUBLIC PATH)
+GET      /api/v1/services/:id       (PUBLIC PATH)
+POST     /api/v1/services/addOne        (ADMIN PATH)
+POST     /api/v1/services/addMany       (ADMIN PATH)
+PUT      /api/v1/services/:id       (ADMIN PATH)
+DELETE   /api/v1/services/:id       (ADMIN PATH)
+DELETE   /api/v1/services/      (ADMIN PATH)
 ```
 
 ### User Cart
 
 ```
-GET      /api/v1/user/cart/:id
-GET      /api/v1/user/cart/:id/checkOutCart
-POST      /api/v1/user/cart/:id/checkOutCart/placeOrder
-PUT      /api/v1/user/cart/:id
-DELETE   /api/v1/user/cart/:id/emptyMyCart
+GET      /api/v1/user/cart/:id      (PUBLIC PATH)
+GET      /api/v1/user/cart/:id/checkOutCart     (PUBLIC PATH)
+POST      /api/v1/user/cart/:id/checkOutCart/placeOrder     (PUBLIC PATH)
+PUT      /api/v1/user/cart/:id      (PUBLIC PATH)
+DELETE   /api/v1/user/cart/:id/emptyMyCart      (PUBLIC PATH)
 ```
 
 ### Users
 
 ```
-GET      /api/v1/users/
-GET      /api/v1/users/:id
-POST     /api/v1/users/
-PUT      /api/v1/users/:id
-DELETE   /api/v1/users/:id
+GET      /api/v1/users/     (ADMIN PATH)
+GET      /api/v1/users/:id      (ADMIN PATH)
+POST     /api/v1/users/     (ADMIN PATH)
+PUT      /api/v1/users/:id      (ADMIN PATH)
+DELETE   /api/v1/users/:id      (ADMIN PATH)
 ```
 
 #### Register new user
 
 ```
-POST     /api/v1/users/register
+POST     /api/v1/users/register     (PUBLIC PATH)
 ```
 
 #### Login user
@@ -79,7 +79,36 @@ POST     /api/v1/users/register
 To login the user and get the auth token you can use:
 
 ```
-POST     /api/v1/users/login
+POST     /api/v1/users/login        (PUBLIC PATH)
+```
+
+# IMPORTANT INSTRUCTIONS
+
+```
+At the time of registration (/api/v1/users/register), the structure of input you will pass in the body
+{
+    "name": "value",
+    "email": "value",
+    "password": "value",
+    "phone": "value",
+    "isAdmin": value, //Optional - for Admin registration set it to true, default value is false
+    "street": "value",
+    "apartment": "value",
+    "zip" :"value",
+    "city": "value",
+    "country": "value"
+}
+
+```
+
+```
+At the time of login (/api/v1/users/login), the structure of input you will pass in the body
+{
+    "email": "value",
+    "password": "value"
+}
+
+    You will receive a token as output in the console. Insert into the header against Authorization (key). Use Bearer keyword before token.
 ```
 
 
