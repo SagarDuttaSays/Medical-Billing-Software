@@ -9,13 +9,20 @@ system that provides seamless functionality and a user-friendly experience.
 
 # Must Haves
 The server should have endpoints to enable the following functionalities for users:
+
 ● Create an account. ✅
+
 ● Fetch all products and services information with their prices. ✅
+
 ● Add a product or service to the cart. ✅ (NOTE: you need to mention the product/service Object ID and its quantity)
+
 ● Remove a product or service from the cart. ✅ (NOTE: there is common path for adding and removing products/services from the cart. If you want to reduce the quantity, mention the new quantity or if you want to remove it entirely, mention 0 in quantity. It will not be added in the final bill.)
+
 ● Clear the cart. ✅
+
 ● View total bill (should include price, quantity, and tax on each item as well as total 
 value of selected items) ✅
+
 ● Confirm the order ✅
 
 # Run
