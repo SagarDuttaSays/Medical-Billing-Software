@@ -29,34 +29,43 @@ npm start
 ```
 GET      /api/v1/products
 GET      /api/v1/products/:id
-POST     /api/v1/products
+POST     /api/v1/products/addOne
+POST     /api/v1/products/addMany
 PUT      /api/v1/products/:id
 DELETE   /api/v1/products/:id
-PUT gallery-images : /api/v1/products/gallery-images/:id
-GET featured products: /api/v1/products/get/featured/:count
-GET products count: /api/v1/products/get/count
+DELETE   /api/v1/products/
 ```
 
-### Orders
+### Services
 
 ```
-GET      /api/v1/orders
-GET      /api/v1/orders/:id
-POST     /api/v1/orders
-PUT      /api/v1/orders/:id
-DELETE   /api/v1/orders/:id
-GET orders count: /api/v1/orders/get/count
+GET      /api/v1/services
+GET      /api/v1/services/:id
+POST     /api/v1/services/addOne
+POST     /api/v1/services/addMany
+PUT      /api/v1/services/:id
+DELETE   /api/v1/services/:id
+DELETE   /api/v1/services/
+```
+
+### User Cart
+
+```
+GET      /api/v1/user/cart/:id
+GET      /api/v1/user/cart/:id/checkOutCart
+POST      /api/v1/user/cart/:id/checkOutCart/placeOrder
+PUT      /api/v1/user/cart/:id
+DELETE   /api/v1/user/cart/:id/emptyMyCart
 ```
 
 ### Users
 
 ```
-GET      /api/v1/users
+GET      /api/v1/users/
 GET      /api/v1/users/:id
-POST     /api/v1/users
+POST     /api/v1/users/
 PUT      /api/v1/users/:id
 DELETE   /api/v1/users/:id
-GET users count: /api/v1/users/get/count
 ```
 
 #### Register new user
