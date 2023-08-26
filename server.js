@@ -39,6 +39,9 @@ mongoose.connect(process.env.MONGO_URL)
     console.log(err);
 })
 
+app.get(`/`, (_,res)=>{
+    res.status(200).json({message:"Welcome to Online Billing System"})
+})
 //Server
 app.listen(3000, ()=>{
 
