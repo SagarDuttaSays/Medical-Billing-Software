@@ -31,13 +31,9 @@ app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/user/cart`, userCartRoutes);
 
 //Database
-mongoose.connect(
-    process.env.MONGO_URL,
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    () => {
-      console.log('Connected to MongoDB');
-    }
-  );
+mongoose.connect(process.env.MONGO_URL, () => {
+    console.log("Mongo connected");
+});
 
 app.get(`/`, (_,res)=>{
     res.status(200).json({message:"Welcome to Online Billing System"})
