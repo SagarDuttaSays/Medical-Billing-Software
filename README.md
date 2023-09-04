@@ -7,7 +7,7 @@ An online billing system is essential for hospitals and healthcare facilities to
 and financial transactions efficiently. Your task is to develop a Node.js server for a billing
 system that provides seamless functionality and a user-friendly experience.
 
-# Must Haves
+# What is does? 
 The server should have endpoints to enable the following functionalities for users:
 
 ● Create an account. ✅
@@ -25,8 +25,7 @@ value of selected items) ✅
 
 ● Confirm the order ✅
 
-# Good to have
-● Additional API for admin to see all the orders. ✅
+Additional API for admin to see all the orders. ✅
 
 ● Appropriate test cases to simulate practical scenarios that you would want to test
 the system for. ✅ (NOTE: I have populated the database with sample admin, users, products and services. Feel free to add/remove.)
