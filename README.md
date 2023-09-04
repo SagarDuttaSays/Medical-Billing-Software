@@ -7,7 +7,7 @@ An online billing system is essential for hospitals, pharmacies and healthcare f
 and financial transactions efficiently. Your task is to develop a Node.js server for a billing
 system that provides seamless functionality and a user-friendly experience.
 
-# What is does? 
+# What it does? 
 The server should have endpoints to enable the following functionalities for users:
 
 ● Create an account. ✅
