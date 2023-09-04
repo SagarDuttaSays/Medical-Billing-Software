@@ -3,7 +3,7 @@
 
 
 # Problem Statement
-An online billing system is essential for hospitals and healthcare facilities to manage their invoicing, payments,
+An online billing system is essential for hospitals, pharmacies and healthcare facilities to manage their invoicing, payments,
 and financial transactions efficiently. Your task is to develop a Node.js server for a billing
 system that provides seamless functionality and a user-friendly experience.
 
@@ -25,7 +25,7 @@ value of selected items) ✅
 
 ● Confirm the order ✅
 
-Additional API for admin to see all the orders. ✅
+● Additional API for admin to see all the orders. ✅
 
 ● Appropriate test cases to simulate practical scenarios that you would want to test
 the system for. ✅ (NOTE: I have populated the database with sample admin, users, products and services. Feel free to add/remove.)
